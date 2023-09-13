@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Chocolate Pack</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <h1>Custom Chocolate Pack</h1>
+  </header>
+  
+  <div class="container">
+    <div class="chocolates">
+      <h2>Select your chocolates</h2>
+      <p>(Total items should not exceed 8)</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="chocolate-item">
+            <img src="https://th.bing.com/th/id/OIP.gFp-bQA2aX96QK1agtG9SgHaFB?pid=ImgDet&rs=1">
+            <h3>Chocolate 1</h3>
+            <button class="minus-btn btn" onclick="decrementQuantity('chocolate1')">-</button>
+            <input type="number" id="chocolate1" class="qty-input" min="0" max="8" value="0" oninput="calculateTotalPrice()">
+            <button class="plus-btn btn" onclick="incrementQuantity('chocolate1')">+</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="chocolate-item">
+            <img src="https://www.cartpk.com/media/catalog/product/cache/ccf016c098f64509830f131aff46d4ef/s/n/snickers_chocolate_6x54gm_pack.jpg">
+            <h3>Chocolate 2</h3>
+            <button class="minus-btn btn" onclick="decrementQuantity('chocolate2')">-</button>
+            <input type="number" id="chocolate2" class="qty-input" min="0" max="8" value="0" oninput="calculateTotalPrice()">
+            <button class="plus-btn btn" onclick="incrementQuantity('chocolate2')">+</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="chocolate-item">
+            <img src="https://n1.sdlcdn.com/imgs/c/t/q/Cadbury-Celebrations-Assorted-Chocolates-Gift-SDL904323447-1-874a3.jpg">
+            <h3>Chocolate 3</h3>
+            <button class="minus-btn btn" onclick="decrementQuantity('chocolate3')">-</button>
+            <input type="number" id="chocolate3" class="qty-input" min="0" max="8" value="0" oninput="calculateTotalPrice()">
+            <button class="plus-btn btn" onclick="incrementQuantity('chocolate3')">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="total-price">
+      <h2>Total Price: <span id="totalPrice">0</span></h2>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.8.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
